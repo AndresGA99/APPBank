@@ -24,43 +24,95 @@
 
     <Button
         android:id="@+id/btnRetiros"
-        android:layout_width="155dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="2dp"
-        android:backgroundTint="#FF3030"
+        android:layout_width="240dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="412dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#C500FF"
+        android:fontFamily="@font/bebas_neue"
         android:text="Retiros"
-        app:layout_constraintEnd_toStartOf="@+id/btnconsulta"
+        android:textColorLink="#9C27B0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeposito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnDeposito"
-        android:layout_width="155dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="6dp"
-        android:backgroundTint="#FF3030"
+        android:layout_width="240dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="472dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#C500FF"
+        android:fontFamily="@font/bebas_neue"
         android:text="Depositar saldo"
-        app:layout_constraintEnd_toStartOf="@+id/btnTrans"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnconsulta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRetiros" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnconsulta"
+        android:layout_width="240dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="532dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#C500FF"
+        android:fontFamily="@font/bebas_neue"
+        android:text="Consultas"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnTrans"
-        android:layout_width="155dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="46dp"
-        android:backgroundTint="#FF3030"
+        android:layout_width="240dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="596dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#C500FF"
+        android:fontFamily="@font/bebas_neue"
         android:text="Transferencias"
-        app:layout_constraintBottom_toTopOf="@+id/btnSalir"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnDeposito"
-        app:layout_constraintTop_toBottomOf="@+id/btnconsulta"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="149dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="228dp"
+        android:text="Bienvenido"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="111dp"
+        android:layout_height="31dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="Opciones"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+
 
     <Button
         android:id="@+id/btnSalir"
@@ -73,19 +125,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnDeposito" />
 
-    <Button
-        android:id="@+id/btnconsulta"
-        android:layout_width="155dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="7dp"
-        android:backgroundTint="#FF3030"
-        android:text="Consultas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRetiros"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="120dp"
@@ -96,16 +135,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/av_logo" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="156dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="179dp"
-        android:text="Seleccione la opción adecuada."
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
