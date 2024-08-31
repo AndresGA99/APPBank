@@ -9,8 +9,8 @@
 
     <FrameLayout
         android:id="@+id/frame_layout"
-        android:layout_width="396dp"
-        android:layout_height="719dp"
+        android:layout_width="409dp"
+        android:layout_height="675dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,7 +22,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="395dp"
+        android:layout_width="410dp"
         android:layout_height="58dp"
         android:layout_marginTop="668dp"
         app:backgroundTint="#C6C6C6"
@@ -152,5 +152,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="412dp"
+        android:layout_height="325dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRetiros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333"
+        app:srcCompat="@drawable/nubank_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
