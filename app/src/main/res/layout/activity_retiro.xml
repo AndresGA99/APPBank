@@ -32,7 +32,9 @@
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#C500FF"
+        android:fontFamily="@font/bebas_neue"
         android:text="Retirar"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
