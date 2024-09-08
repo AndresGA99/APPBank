@@ -80,7 +80,6 @@
         </LinearLayout>
 
 
-
         <Button
             android:id="@+id/btnHelp"
             android:layout_width="299dp"
