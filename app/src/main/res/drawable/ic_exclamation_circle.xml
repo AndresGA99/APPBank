@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Fondo púrpura -->
+    <path
+        android:fillColor="#FF00FF"
+        android:pathData="M0,0h24v24H0z"
+        android:fillType="evenOdd" />
+
+    <!-- Círculo blanco -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2z" />
+
+    <!-- Signo de exclamación en el centro -->
+    <path
+        android:fillColor="#FF00FF"
+        android:pathData="M12,16.5c0.69,0 1.25,0.56 1.25,1.25S12.69,19 12,19s-1.25,-0.56 -1.25,-1.25 0.56,-1.25 1.25,-1.25zm-1,-10h2v7h-2v-7z"/>
+</vector>
