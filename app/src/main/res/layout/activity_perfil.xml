@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="-95dp"
+        tools:layout_editor_absoluteY="-317dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="8dp"
+            android:text="←"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="TU PERFIL"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Mark Perez"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Número de cuenta -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAccountNumberLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="10dp"
+                android:background="#A320FF"
+                android:padding="8dp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="# de tu cuenta"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvAccountNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#A320FF"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="*********************"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnHelp"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#A320FF"
+            android:drawableLeft="@drawable/ic_help"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:text="Ayuda"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnPassword"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#A320FF"
+            android:drawableLeft="@drawable/ic_lock"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:text="Clave"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnAboutApp"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#A320FF"
+            android:drawableLeft="@drawable/ic_info"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:text="Sobre la APP"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#A320FF"
+            android:drawableLeft="@drawable/ic_logout"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:text="Salir"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
