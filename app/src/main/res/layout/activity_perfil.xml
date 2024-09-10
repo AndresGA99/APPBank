@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:backgroundTint="#A320FF"
-            android:drawableLeft="@drawable/ic_help"
+
             android:paddingHorizontal="16dp"
             android:paddingVertical="16dp"
             android:text="Ayuda"
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="#A320FF"
-            android:drawableLeft="@drawable/ic_lock"
+
             android:paddingHorizontal="16dp"
             android:paddingVertical="16dp"
             android:text="Clave"
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="#A320FF"
-            android:drawableLeft="@drawable/ic_info"
+
             android:paddingHorizontal="16dp"
             android:paddingVertical="16dp"
             android:text="Sobre la APP"
@@ -125,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="#A320FF"
-            android:drawableLeft="@drawable/ic_logout"
+
             android:paddingHorizontal="16dp"
             android:paddingVertical="16dp"
             android:text="Salir"
