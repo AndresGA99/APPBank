@@ -24,11 +24,9 @@
         android:id="@+id/imageView2"
         android:layout_width="380dp"
         android:layout_height="204dp"
-        android:layout_marginBottom="77dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grupo_aval" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/idPassNueva"
@@ -78,8 +76,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.363"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -99,8 +96,7 @@
         android:layout_marginStart="43dp"
         android:layout_marginTop="17dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/flechas" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView17"
@@ -109,7 +105,6 @@
         android:layout_marginTop="31dp"
         android:layout_marginEnd="58dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idPassAntigua"
-        app:srcCompat="@drawable/flechas_2" />
+        app:layout_constraintTop_toBottomOf="@+id/idPassAntigua" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
