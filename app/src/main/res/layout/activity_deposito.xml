@@ -9,6 +9,22 @@
     tools:context=".DepositoActivity">
 
     <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/bebas_neue"
+        android:textSize="16sp"
+        app:icon="@drawable/back_icon"
+        app:iconTint="#7C30D8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <Button
         android:id="@+id/btnD"
         android:layout_width="270dp"
         android:layout_height="48dp"
@@ -18,9 +34,12 @@
         android:fontFamily="@font/bebas_neue"
         android:text="Realizar Deposito"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.784" />
 
     <EditText
         android:id="@+id/textDeposito"
@@ -36,10 +55,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.096" />
 
     <TextView
         android:id="@+id/textView4"
@@ -47,7 +66,7 @@
         android:layout_height="39dp"
         android:layout_gravity="center"
         android:layout_marginStart="53dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="284dp"
         android:layout_marginEnd="53dp"
         android:fontFamily="@font/bebas_neue"
         android:text="Ingrese el monto a depositar:"
@@ -64,22 +83,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="48dp"
         android:layout_marginEnd="99dp"
         android:fontFamily="@font/bebas_neue"
         android:text="Depositar Dinero"
         android:textColor="#101010"
         android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="88dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="410dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="668dp"
-        app:backgroundTint="#C6C6C6" />
+        app:layout_constraintTop_toBottomOf="@+id/btnD"
+        app:srcCompat="@drawable/nubank_logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

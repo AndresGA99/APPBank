@@ -9,28 +9,52 @@
     tools:context=".TransferenciaActivity">
 
 
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/bebas_neue"
+        android:textSize="16sp"
+        app:icon="@drawable/back_icon"
+        app:iconTint="#7C30D8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="213dp"
         android:layout_height="59dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginEnd="31dp"
+        android:fontFamily="@font/bebas_neue"
         android:text="TRANSFERENCIAS"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="44dp" />
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/bebas_neue"
         android:text="¿A quién desea depositar? \nEscriba su número de cuenta"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.986"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
 
@@ -50,12 +74,13 @@
 
     <TextView
         android:id="@+id/textViewMonto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="174dp"
+        android:layout_height="29dp"
         android:layout_marginTop="52dp"
+        android:fontFamily="@font/bebas_neue"
         android:text="Monto a depositar"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +91,7 @@
         android:layout_width="180dp"
         android:layout_height="63dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:hint="Monto"
         android:inputType="numberDecimal"
@@ -77,18 +102,34 @@
 
     <Button
         android:id="@+id/btnAceptar"
-        android:layout_width="339dp"
-        android:layout_height="66dp"
+        android:layout_width="220dp"
+        android:layout_height="44dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="164dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="#C500FF"
+        android:fontFamily="@font/bebas_neue"
         android:text="Aceptar"
         android:textColor="#FFFFFF"
         android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtMonto" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.749" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="91dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="314dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAceptar"
+        app:srcCompat="@drawable/nubank_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

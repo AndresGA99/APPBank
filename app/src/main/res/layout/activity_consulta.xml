@@ -7,39 +7,39 @@
     android:background="@drawable/fondo_principal"
     tools:context=".ConsultaActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="410dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="668dp"
-        app:backgroundTint="#C6C6C6"
-        app:circularflow_defaultRadius="8sp"
-        app:itemIconPadding="80dp"
-        app:itemIconSize="20dp"
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/bebas_neue"
+        android:textSize="16sp"
+        app:icon="@drawable/back_icon"
+        app:iconTint="#7C30D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.99"
-        app:menu="@menu/bottom_nav" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <Button
         android:id="@+id/btnsaldo"
         android:layout_width="191dp"
         android:layout_height="46dp"
         android:layout_marginStart="110dp"
+        android:layout_marginTop="380dp"
         android:layout_marginEnd="110dp"
+        android:layout_marginBottom="22dp"
         android:backgroundTint="#C500FF"
         android:fontFamily="@font/bebas_neue"
         android:text="Saldo"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toTopOf="@+id/btnclave"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -47,17 +47,18 @@
         android:layout_width="191dp"
         android:layout_height="46dp"
         android:layout_marginStart="110dp"
+        android:layout_marginTop="448dp"
         android:layout_marginEnd="110dp"
+        android:layout_marginBottom="18dp"
         android:backgroundTint="#C500FF"
         android:fontFamily="@font/bebas_neue"
         android:text="Clave"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toTopOf="@+id/btnHT"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -65,33 +66,35 @@
         android:layout_width="191dp"
         android:layout_height="46dp"
         android:layout_marginStart="110dp"
+        android:layout_marginTop="512dp"
         android:layout_marginEnd="110dp"
+        android:layout_marginBottom="173dp"
         android:backgroundTint="#C500FF"
         android:fontFamily="@font/bebas_neue"
         android:text="Historial"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginEnd="149dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginBottom="234dp"
         android:fontFamily="@font/bebas_neue"
         android:text="Consultas"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnHT"
+        app:layout_constraintBottom_toTopOf="@+id/btnsaldo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/txtS"
@@ -107,5 +110,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="74dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="321dp"
+        android:layout_marginTop="651dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nubank_logo" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="39dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="236dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnsaldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search_black_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

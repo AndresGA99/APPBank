@@ -26,6 +26,7 @@ import org.json.JSONObject;
 
 public class RetiroActivity extends AppCompatActivity {
 
+    Button btnSalir;
     private EditText editTextAmount;
     String url = "https://atm-api-eight.vercel.app/api/transaction/withdraw";
 
@@ -35,13 +36,22 @@ public class RetiroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_retiro);
         editTextAmount = findViewById(R.id.editTextM);
         Button buttonWithdraw = findViewById(R.id.btnRetiro);
+        btnSalir = findViewById(R.id.btnSalir);
         buttonWithdraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Retiro();
             }
         });
+
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RetiroActivity.this, MenuActivity.class));
+            }
+        });
     }
+
 
     public void Retiro() {
         if(editTextAmount.getText().toString().isEmpty()){

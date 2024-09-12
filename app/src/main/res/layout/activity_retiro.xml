@@ -8,13 +8,29 @@
     android:background="@mipmap/fondo_banco_1"
     tools:context=".RetiroActivity">
 
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/bebas_neue"
+        android:textSize="16sp"
+        app:icon="@drawable/back_icon"
+        app:iconTint="#7C30D8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
     <EditText
         android:id="@+id/editTextM"
         android:layout_width="264dp"
         android:layout_height="39dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="110dp"
+        android:layout_marginEnd="97dp"
         android:layout_marginBottom="37dp"
         android:ems="10"
         android:hint="De $1000 a $10'000.000"
@@ -31,30 +47,33 @@
         android:layout_height="48dp"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="20dp"
         android:backgroundTint="#C500FF"
         android:fontFamily="@font/bebas_neue"
         android:text="Retirar"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="355dp"
         android:layout_height="46dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="147dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="648dp"
+        android:layout_marginBottom="33dp"
         android:fontFamily="@font/bebas_neue"
         android:text="Retiro de dinero"
         android:textAlignment="center"
         android:textColor="#0D0D0D"
         android:textSize="38sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,8 +81,8 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginEnd="196dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="183dp"
         android:fontFamily="@font/bebas_neue"
         android:text="Ingrese el monto a retirar"
         android:textSize="20sp"
@@ -73,52 +92,46 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="410dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="668dp"
-        app:backgroundTint="#C6C6C6"
-        app:circularflow_defaultRadius="8sp"
-        app:itemIconPadding="80dp"
-        app:itemIconSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.99"
-        app:menu="@menu/bottom_nav" />
-
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="259dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="233dp"
         android:fontFamily="@font/bebas_neue"
         android:text="Escribe un mensaje"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine4"
-        android:layout_width="362dp"
-        android:layout_height="42dp"
+        android:layout_width="310dp"
+        android:layout_height="41dp"
         android:layout_marginStart="21dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="228dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.549" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="83dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/nubank_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

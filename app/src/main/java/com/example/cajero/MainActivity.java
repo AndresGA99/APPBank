@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -17,6 +19,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.cajero.models.Account;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -68,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                 public void onResponse(JSONObject response) {
                     try {
                         // Mostrando el mensaje de respuesta en un Toast tkm
+
+
                         JSONObject name = response.getJSONObject("person");
                         double balance = response.getDouble("balance");
                         String accountNumber = response.getString("accountNumber");
@@ -77,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                         intent.putExtra("saldo", balance);
                         startActivity(intent);
+
                         finish();
                     } catch (JSONException ex) {
                         Toast.makeText(getApplicationContext(), "Error al procesar la respuesta" + ex.getMessage(), Toast.LENGTH_SHORT).show();
@@ -95,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Error al procesar la solicitud", Toast.LENGTH_SHORT).show();
         }
     }
+
 
 
 }

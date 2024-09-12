@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.cajero.models.Account;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class ConsultaActivity extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class ConsultaActivity extends AppCompatActivity {
         txtSaldo= findViewById(R.id.txtS);
         Button btnClave = findViewById(R.id.btnclave);
         Button btnHistorial = findViewById(R.id.btnHT);
+        Button btnSalir = findViewById(R.id.btnSalir);
+
         bntSaldo.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -30,6 +33,13 @@ public class ConsultaActivity extends AppCompatActivity {
                 txtSaldo.setText(String.valueOf(balance));
             }
 
+        });
+
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ConsultaActivity.this, MenuActivity.class));
+            }
         });
 
         btnHistorial.setOnClickListener(new View.OnClickListener() {
@@ -45,5 +55,7 @@ public class ConsultaActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), ClaveActivity.class));
             }
         });
+
+
     }
 }

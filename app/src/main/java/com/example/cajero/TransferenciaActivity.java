@@ -32,11 +32,19 @@ public class TransferenciaActivity extends AppCompatActivity {
         txtMonto = findViewById(R.id.txtMonto);
         Button btnAcpetar = findViewById(R.id.btnAceptar);
         txtCuenta = findViewById(R.id.txtNumeroCuenta);
+        Button btnSalir = findViewById(R.id.btnSalir);
 
         btnAcpetar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 deposit();
+            }
+        });
+
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TransferenciaActivity.this, MenuActivity.class));
             }
         });
 
