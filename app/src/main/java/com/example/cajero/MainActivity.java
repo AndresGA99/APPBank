@@ -8,24 +8,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.cajero.models.Account;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,13 +37,21 @@ public class MainActivity extends AppCompatActivity {
         editTextUsername = findViewById(R.id.editTextCuenta);
         editTextPassword = findViewById(R.id.editTextPIN);
         buttonLogin = findViewById(R.id.buttonIngresar);
-
         requestQueue = Volley.newRequestQueue(this);
-
+        View textViewSignUp = findViewById(R.id.textViewSignUp);
+        
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loginUser();
+            }
+        });
+
+        textViewSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -64,26 +65,22 @@ public class MainActivity extends AppCompatActivity {
             JSONObject jsonParams = new JSONObject();
             jsonParams.put("accountNumber", username);
             jsonParams.put("password", password);
-
-
             JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.POST, url, jsonParams, new Response.Listener<JSONObject>() {
+
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
-                        // Mostrando el mensaje de respuesta en un Toast tkm
-
-
+                        // Mostrando el mensaje de respuesta en un Toast
                         JSONObject name = response.getJSONObject("person");
                         double balance = response.getDouble("balance");
                         String accountNumber = response.getString("accountNumber");
-                        Account account = new Account(accountNumber,balance); //hola
+                        Account account = new Account(accountNumber,balance);
                         Toast.makeText(getApplicationContext(), "Bienvenido " + name.getString("name"), Toast.LENGTH_SHORT).show();
-
                         Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                         intent.putExtra("saldo", balance);
                         startActivity(intent);
-
                         finish();
+
                     } catch (JSONException ex) {
                         Toast.makeText(getApplicationContext(), "Error al procesar la respuesta" + ex.getMessage(), Toast.LENGTH_SHORT).show();
                         ex.printStackTrace();
@@ -101,8 +98,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Error al procesar la solicitud", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 
 }
 

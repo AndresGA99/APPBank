@@ -48,7 +48,6 @@ public class HistorialActivity extends AppCompatActivity {
         String URL = Urlbase + cuenta;
 
         RequestQueue queue = Volley.newRequestQueue(this);
-
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONArray>() {
                     @Override
