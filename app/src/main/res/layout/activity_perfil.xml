@@ -6,13 +6,13 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="410dp"
+        android:layout_height="729dp"
         android:background="#FFFFFF"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:layout_editor_absoluteX="-205dp"
-        tools:layout_editor_absoluteY="-290dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
         <Button
@@ -136,7 +136,6 @@
             android:text="Salir"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
-
 
 
     </LinearLayout>
