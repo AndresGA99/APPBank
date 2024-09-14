@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         editTextUsername = findViewById(R.id.editTextCuenta);
         editTextPassword = findViewById(R.id.editTextPIN);
-        buttonLogin = findViewById(R.id.buttonIngresar);
+        buttonLogin = findViewById(R.id.btnIngresar);
         requestQueue = Volley.newRequestQueue(this);
         View textViewSignUp = findViewById(R.id.textViewSignUp);
         

@@ -57,7 +57,7 @@
         app:layout_constraintVertical_bias="0.162" />
 
     <Button
-        android:id="@+id/buttonIngresar"
+        android:id="@+id/btnIngresar"
         android:layout_width="280dp"
         android:layout_height="47dp"
         android:backgroundTint="#C500FF"
@@ -104,7 +104,7 @@
         app:layout_constraintVertical_bias="0.357" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/TxtPassword"
         android:layout_width="313dp"
         android:layout_height="43dp"
         android:layout_marginStart="47dp"
@@ -119,7 +119,7 @@
         app:layout_constraintVertical_bias="0.674" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/TxtPassword2"
         android:layout_width="313dp"
         android:layout_height="44dp"
         android:layout_marginStart="47dp"
@@ -134,7 +134,7 @@
         app:layout_constraintVertical_bias="0.752" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/TxtPhone"
         android:layout_width="311dp"
         android:layout_height="43dp"
         android:layout_marginStart="47dp"
