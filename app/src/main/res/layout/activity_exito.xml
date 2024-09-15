@@ -22,6 +22,21 @@
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/txtNumeroCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="105dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="Número de cuenta: "
+        android:textColor="#FFFEFE"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
     <Button
         android:id="@+id/btnContinuar"
         android:layout_width="265dp"

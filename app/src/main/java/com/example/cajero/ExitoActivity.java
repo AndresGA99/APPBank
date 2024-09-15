@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,13 +18,17 @@ public class ExitoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exito);
-        Button btnContinuar = findViewById(R.id.btnContinuar);
 
-        btnContinuar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(ExitoActivity.this, MenuActivity.class));
-            }
+
+        String accountNumber = getIntent().getStringExtra("ACCOUNT_NUMBER");
+        TextView txtNumeroCuenta = findViewById(R.id.txtNumeroCuenta);
+        txtNumeroCuenta.setText("Número de cuenta: " + accountNumber);
+
+        Button btnContinuar = findViewById(R.id.btnContinuar);
+        btnContinuar.setOnClickListener(v -> {
+            Intent intent = new Intent(ExitoActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         });
 
     }

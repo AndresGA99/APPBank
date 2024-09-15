@@ -96,6 +96,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
+
     <TextView
         android:id="@+id/txtS"
         android:layout_width="wrap_content"
@@ -105,11 +106,14 @@
         android:layout_marginEnd="235dp"
         android:layout_marginBottom="455dp"
         android:fontFamily="@font/bebas_neue"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView5"

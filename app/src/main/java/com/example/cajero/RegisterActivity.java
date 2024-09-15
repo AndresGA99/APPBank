@@ -101,10 +101,18 @@ public class RegisterActivity extends AppCompatActivity {
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
-                            Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(RegisterActivity.this, ExitoActivity.class);
-                            startActivity(intent);
-                            finish();
+                            try {
+                                String accountNumber = response.getString("accountNumber");
+
+                                Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(RegisterActivity.this, ExitoActivity.class);
+                                intent.putExtra("ACCOUNT_NUMBER", accountNumber);  // Pasar el número de cuenta
+                                startActivity(intent);
+                                finish();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Toast.makeText(RegisterActivity.this, "Error al procesar la respuesta", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     },
                     new Response.ErrorListener() {
