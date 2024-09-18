@@ -40,7 +40,7 @@
     <Button
         android:id="@+id/btnContinuar"
         android:layout_width="265dp"
-        android:layout_height="47dp"
+        android:layout_height="50dp"
         android:layout_marginStart="73dp"
         android:layout_marginEnd="73dp"
         android:backgroundTint="#FFFFFF"

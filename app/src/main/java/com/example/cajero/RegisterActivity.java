@@ -1,8 +1,8 @@
 package com.example.cajero;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,8 +20,6 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.UUID;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -50,7 +48,6 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 registerUser();
             }
-
         });
 
         TextView textViewSignIn = findViewById(R.id.textViewSignIn);
@@ -104,6 +101,17 @@ public class RegisterActivity extends AppCompatActivity {
                             try {
                                 String accountNumber = response.getString("accountNumber");
 
+                                // Guardar los datos del usuario en SharedPreferences
+                                SharedPreferences preferences = getSharedPreferences("user_session", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("user_name", nombre);
+                                editor.putString("user_email", correo);
+                                editor.putString("user_phone", telefono);
+                                editor.putString("user_city", ciudad);
+                                editor.putString("user_id", cedula);
+
+                                editor.apply();
+
                                 Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegisterActivity.this, ExitoActivity.class);
                                 intent.putExtra("ACCOUNT_NUMBER", accountNumber);  // Pasar el número de cuenta
@@ -136,8 +144,4 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-
-
 }
-
-

@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -19,27 +20,28 @@ import com.example.cajero.models.Account;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 public class MainActivity extends AppCompatActivity {
 
     private EditText editTextUsername;
     private EditText editTextPassword;
     private Button buttonLogin;
-
     private RequestQueue requestQueue;
-    String url = "https://atm-api-eight.vercel.app/api/user/login";
+
+    // URL de la API para iniciar sesión
+    private String url = "https://atm-api-eight.vercel.app/api/user/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Inicializar los componentes de la interfaz de usuario
         editTextUsername = findViewById(R.id.editTextCuenta);
         editTextPassword = findViewById(R.id.editTextPIN);
         buttonLogin = findViewById(R.id.btnIngresar);
         requestQueue = Volley.newRequestQueue(this);
-        View textViewSignUp = findViewById(R.id.textViewSignUp);
-        
+
+        // Configurar el botón de inicio de sesión
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Configurar el enlace para ir a la pantalla de registro
+        View textViewSignUp = findViewById(R.id.textViewSignUp);
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,49 +59,66 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void loginUser() {
-        // Obteniendo los valores de nombre de usuario y contraseña desde los EditTexts
+
+    private void loginUser() {
+        // Obtener valores de los EditTexts
         final String username = editTextUsername.getText().toString().trim();
         final String password = editTextPassword.getText().toString().trim();
 
-        // Creando una solicitud POST usando StringRequest
+        // Validar campos vacíos
+        if (username.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Por favor, ingrese todos los campos", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         try {
+            // Crear parámetros JSON para la solicitud POST
             JSONObject jsonParams = new JSONObject();
             jsonParams.put("accountNumber", username);
             jsonParams.put("password", password);
-            JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.POST, url, jsonParams, new Response.Listener<JSONObject>() {
 
-                @Override
-                public void onResponse(JSONObject response) {
-                    try {
-                        // Mostrando el mensaje de respuesta en un Toast
-                        JSONObject name = response.getJSONObject("person");
-                        double balance = response.getDouble("balance");
-                        String accountNumber = response.getString("accountNumber");
-                        Account account = new Account(accountNumber,balance);
-                        Toast.makeText(getApplicationContext(), "Bienvenido " + name.getString("name"), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                        intent.putExtra("saldo", balance);
-                        startActivity(intent);
-                        finish();
+            // Crear la solicitud POST
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonParams,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            try {
+                                // Procesar la respuesta de la API
+                                JSONObject person = response.getJSONObject("person");
+                                double balance = response.getDouble("balance");
+                                String accountNumber = response.getString("accountNumber");
 
-                    } catch (JSONException ex) {
-                        Toast.makeText(getApplicationContext(), "Error al procesar la respuesta" + ex.getMessage(), Toast.LENGTH_SHORT).show();
-                        ex.printStackTrace();
+                                // Crear objeto Account y mostrar mensaje de bienvenida
+                                Account account = new Account(accountNumber, balance);
+                                Toast.makeText(getApplicationContext(), "Bienvenido " + person.getString("name"), Toast.LENGTH_SHORT).show();
+
+                                // Iniciar la actividad del menú y pasar el saldo
+                                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                                intent.putExtra("saldo", balance);
+                                startActivity(intent);
+                                finish();
+
+                            } catch (JSONException e) {
+                                Toast.makeText(getApplicationContext(), "Error al procesar la respuesta: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            // Mostrar mensaje de error en caso de fallo
+                            Toast.makeText(getApplicationContext(), "Error al procesar la solicitud: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    // Mostrando el mensaje de error en un Toast
-                    Toast.makeText(getApplicationContext(), "Error al procesar la solicitud", Toast.LENGTH_SHORT).show();
-                }
-            });
-            Volley.newRequestQueue(this).add(stringRequest);
-        } catch (JSONException ex) {
+            );
+
+            // Añadir la solicitud a la cola de solicitudes
+            requestQueue.add(jsonObjectRequest);
+
+        } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), "Error al procesar la solicitud", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }
     }
-
 }
-

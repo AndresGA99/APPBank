@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.content.SharedPreferences;
 
 public class ExitoActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class ExitoActivity extends AppCompatActivity {
         String accountNumber = getIntent().getStringExtra("ACCOUNT_NUMBER");
         TextView txtNumeroCuenta = findViewById(R.id.txtNumeroCuenta);
         txtNumeroCuenta.setText("Número de cuenta: " + accountNumber);
+
 
         Button btnContinuar = findViewById(R.id.btnContinuar);
         btnContinuar.setOnClickListener(v -> {
