@@ -30,6 +30,7 @@
             app:layout_constraintHorizontal_bias="0.049"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="#C500FF"
             app:layout_constraintVertical_bias="0.03" />
 
 
@@ -53,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
-            android:text="Perfil del Usuario"
+            android:text="TU PERFIL"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -143,6 +144,7 @@
             android:text="@string/cerrar_sesion"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="#C500FF"
             app:layout_constraintTop_toBottomOf="@id/textViewPhone" />
 
 
